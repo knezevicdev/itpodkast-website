@@ -20,7 +20,7 @@
             </ul>
             <div class="flex justify-center items-center mt-10 gap-4">
                 @if($page > 1)
-                    <x-orange-button href="{{ route('epizode', [ 'page' => $page - 1 ]) }}">
+                    <x-orange-button href="{{ route('epizode', [ 'page' => $page - 1 ]) }}" wire:navigate>
                         <svg height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"
                              transform="translate(0, 1)">
                             <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
@@ -29,7 +29,7 @@
                     </x-orange-button>
                 @endif
                 @if($totalPages > $page)
-                    <x-orange-button href="{{ route('epizode', [ 'page' => $page + 1 ]) }}">
+                    <x-orange-button href="{{ route('epizode', [ 'page' => $page + 1 ]) }}" wire:navigate>
                         Sledeće
                         <svg height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"
                              transform="translate(0, 1)">
