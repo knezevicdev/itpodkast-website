@@ -4,7 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Podkast IT Tipa!</title>
+    <title>Podkast IT Tipa — Sve što ste hteli da znate o softverskom inženjerstvu, a niste smeli da pitate!</title>
+    <meta name="description" content="Sve što ste hteli da znate o softverskom inženjerstvu, a niste smeli da pitate!" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Podkast IT Tipa — Sve što ste hteli da znate o softverskom inženjerstvu, a niste smeli da pitate!" />
+    <meta property="og:description" content="Sve što ste hteli da znate o softverskom inženjerstvu, a niste smeli da pitate!" />
+    <meta property="og:site_name" content="Podkast IT Tipa" />
+    <meta property="og:image" content="{{ asset('/images/cover.jpeg') }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ asset('/images/cover.jpeg') }}" />
+
     @livewireStyles
     @vite(['resources/css/app.css'])
 </head>
