@@ -18,27 +18,23 @@
                         <span class="text-xl lg:pr-5 pb-2 lg:pb-0">Slušajte nas na:</span>
                         <ul class="flex gap-2 lg:gap-8">
                             <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/apple-podcast.svg" alt="apple podcast"
+                                <a href="{{ config('app.apple_podcasts_url') }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/apple-podcast.svg" alt="apple podcast"
                                                  class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
                             </li>
                             <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/google-podcasts.svg" alt="google podcasts"
+                                <a href="{{ config('app.google_podcasts_url') }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/google-podcasts.svg" alt="google podcasts"
                                                  class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
                             </li>
                             <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/stitcher.svg" alt="stitcher"
+                                <a href="{{ config('app.deezer_url') }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/deezer.svg" alt="deezer"
                                                  class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
                             </li>
                             <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/deezer.svg" alt="deezer"
+                                <a href="{{ config('app.spotify_url') }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/spotify.svg" alt="spotify"
                                                  class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
                             </li>
                             <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/spotify.svg" alt="spotify"
-                                                 class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
-                            </li>
-                            <li class="flex items-center">
-                                <a href="#"><img src="/images/icons/youtube.svg" alt="youtube"
+                                <a href="{{ config('app.youtube_url') }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/youtube.svg" alt="youtube"
                                                  class="w-10 hover:scale-110 transition-transform ease-in-out"></a>
                             </li>
                         </ul>
@@ -76,10 +72,6 @@
                 </div>
                 <div class="flex items-center flex-none">
                     <img src="/images/divider.svg" alt="divider" class="w-10 mx-7">
-                    <div class="text-3xl uppercase font-azeret-mono">Stitcher</div>
-                </div>
-                <div class="flex items-center flex-none">
-                    <img src="/images/divider.svg" alt="divider" class="w-10 mx-7">
                     <div class="text-3xl uppercase font-azeret-mono">Apple podcasts</div>
                 </div>
                 <div class="flex items-center flex-none">
@@ -103,25 +95,25 @@
                     @foreach($episodes as $episode)
                         <li class="p-6 border-2 border-black mb-8">
                             <div class="grid grid-cols-1 lg:grid-cols-episode gap-3 lg:gap-8">
-                                <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}" class="inline-block">
-                                    <img class="border-2 border-black" src="/images/epizoda-thumb.jpeg" alt="episode">
+                                <a href="{{ route('epizoda', ['slug' => $episode->slug]) }}" class="inline-block">
+                                    <img class="border-2 border-black" src="{{ $episode->cover_image_url }}" alt="episode">
                                 </a>
                                 <div class="flex flex-col">
                                     <div class="flex flex-col lg:flex-row justify-between pt-2.5">
-                                        <span class="font-azeret-mono font-semibold text-orange text-lg">Epizoda {{ $episode['number'] }}</span>
+                                        <span class="font-azeret-mono font-semibold text-orange text-lg">Epizoda {{ $episode->number }}</span>
                                         <div class="flex items-center mt-2 lg:mt-0">
                                             <img src="/images/icons/clock.svg" alt="clock" class="mr-1.5 w-4 h-4">
-                                            <span class="text-gray text-lg font-azeret-mono">{{ $episode['duration'] }}</span>
+                                            <span class="text-gray text-lg font-azeret-mono">{{ $episode->formatted_duration }}</span>
                                         </div>
                                     </div>
-                                    <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}">
+                                    <a href="{{ route('epizoda', ['slug' => $episode->slug]) }}">
                                         <h6 class="text-xl lg:text-3xl mt-2.5 hover:text-orange transition-all ease-in-out">
-                                            {{ $episode['title'] }}
+                                            {{ $episode->title }}
                                         </h6>
                                     </a>
                                     <div class="mt-auto flex justify-between flex-col xl:flex-row">
                                         <div class="mt-4 xl:mt-0">
-                                            <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}"
+                                            <a href="{{ route('epizoda', ['slug' => $episode->slug]) }}"
                                                class="px-6 lg:px-8 py-2 lg:py-4 bg-black text-white font-azeret-mono font-semibold text-md lg:text-xs inline-block transition-shadow hover:shadow-effect-orange">Pusti
                                                 epizodu</a>
                                         </div>
@@ -129,27 +121,23 @@
                                             <span class="text-gray pr-2.5">Poslušajte na:</span>
                                             <ul class="flex gap-2.5 mt-2 lg:mt-0">
                                                 <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/apple-podcast.svg" alt="apple podcast"
+                                                    <a href="{{ $episode->apple_podcasts_url }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/apple-podcast.svg" alt="apple podcast"
                                                                      class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
                                                 </li>
                                                 <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/google-podcasts.svg" alt="google podcasts"
+                                                    <a href="{{ $episode->google_podcasts_url }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/google-podcasts.svg" alt="google podcasts"
                                                                      class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
                                                 </li>
                                                 <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/stitcher.svg" alt="stitcher"
+                                                    <a href="{{ $episode->deezer_url }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/deezer.svg" alt="deezer"
                                                                      class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
                                                 </li>
                                                 <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/deezer.svg" alt="deezer"
+                                                    <a href="{{ $episode->spotify_url }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/spotify.svg" alt="spotify"
                                                                      class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
                                                 </li>
                                                 <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/spotify.svg" alt="spotify"
-                                                                     class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
-                                                </li>
-                                                <li class="flex items-center">
-                                                    <a href="#"><img src="/images/icons/youtube.svg" alt="youtube"
+                                                    <a href="{{ $episode->youtube_url }}" target="_blank" rel="noopener noreferrer"><img src="/images/icons/youtube.svg" alt="youtube"
                                                                      class="w-5 hover:scale-110 transition-transform ease-in-out"></a>
                                                 </li>
                                             </ul>

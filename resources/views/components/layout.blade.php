@@ -46,44 +46,38 @@
 
     <div class="px-4 lg:px-0">
         <div class="border-x-2 lg:border-x-0 lg:border-y-2 border-black">
-            <div class="lg:container grid grid-cols-1 lg:grid-cols-7">
+            <div class="lg:container grid grid-cols-1 lg:grid-cols-6">
                 <div
                     class="py-8 lg:px-5 border-black border-y-2 lg:border-y-0 lg:border-x-2 flex justify-center items-center font-bold text-lg">
                     Nađi nas na:
                 </div>
                 <div
                     class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
+                    <a href="{{ config('app.apple_podcasts_url') }}" target="_blank" rel="noopener noreferrer">
                         <img src="/images/logos/apple-podcasts.svg" alt="apple podcast" class="h-10">
                     </a>
                 </div>
                 <div
                     class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
+                    <a href="{{ config('app.google_podcasts_url') }}" target="_blank" rel="noopener noreferrer">
                         <img src="/images/logos/google-podcasts.svg" alt="google podcasts" class="h-10">
                     </a>
                 </div>
                 <div
                     class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
-                        <img src="/images/logos/stitcher.svg" alt="stitcher" class="h-10">
-                    </a>
-                </div>
-                <div
-                    class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
+                    <a href="{{ config('app.deezer_url') }}" target="_blank" rel="noopener noreferrer">
                         <img src="/images/logos/deezer.svg" alt="deezer" width="231" class="h-10">
                     </a>
                 </div>
                 <div
                     class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
+                    <a href="{{ config('app.spotify_url') }}" target="_blank" rel="noopener noreferrer">
                         <img src="/images/logos/spotify.svg" alt="spotify" class="h-10">
                     </a>
                 </div>
                 <div
                     class="py-8 lg:px-5 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex justify-center items-center font-bold text-lg">
-                    <a href="#">
+                    <a href="{{ config('app.youtube_url') }}" target="_blank" rel="noopener noreferrer">
                         <img src="/images/logos/youtube.svg" alt="youtube" width="176" class="h-10">
                     </a>
                 </div>
@@ -96,10 +90,10 @@
             <img src="/images/logo.png" alt="Logo" class="max-h-24">
             <div>
                 <div class="flex gap-2 justify-center lg:justify-end mb-2 mt-2 lg:mt-0">
-                    <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
+                    <a href="https://www.instagram.com/podkastittipa/" target="_blank" rel="noopener noreferrer" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
                         <img src="/images/icons/instagram-dark.svg" alt="instagram" class="w-4">
                     </a>
-                    <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
+                    <a href="https://twitter.com/podkastittipa" target="_blank" rel="noopener noreferrer" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
                         <img src="/images/icons/twitter-dark.svg" alt="twitter" class="w-4">
                     </a>
                 </div>

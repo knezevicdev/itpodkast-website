@@ -185,4 +185,9 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'apple_podcasts_url' => 'https://podcasts.apple.com/us/podcast/podkast-it-tipa/id1564651181',
+    'google_podcasts_url' => 'https://podcasts.google.com/feed/aHR0cHM6Ly9pdHBvZGthc3QuY29tL2ZlZWQvcG9kY2FzdA',
+    'spotify_url' => 'https://open.spotify.com/show/6kP8vDpbiZs311d07raXEF',
+    'deezer_url' => 'https://www.deezer.com/sr/show/2573342',
+    'youtube_url' => 'https://www.youtube.com/@itpodkast',
 ];

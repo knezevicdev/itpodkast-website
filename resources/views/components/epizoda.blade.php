@@ -1,7 +1,7 @@
 <div class="p-6 border-2 border-black min-h-full">
     <div class="grid grid-cols-1 gap-3">
         <a href="{{ route('epizoda', [ 'slug' => $slug ]) }}" class="inline-block">
-            <img class="border-2 border-black" src="/images/epizoda-thumb.jpeg" alt="episode">
+            <img class="border-2 border-black" src="{{ $thumbnail }}" alt="episode">
         </a>
         <div class="flex flex-col">
             <div class="flex flex-col justify-between pt-2.5">

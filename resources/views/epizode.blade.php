@@ -8,11 +8,11 @@
                 @foreach ($episodes as $episode)
                     <li>
                         <x-epizoda
-                            thumbnail="/images/epizoda-thumb.jpeg"
-                            :slug="$episode['slug']"
-                            :title="$episode['title']"
-                            :number="$episode['number']"
-                            :duration="$episode['duration']"
+                            :thumbnail="$episode->cover_image_url"
+                            :slug="$episode->slug"
+                            :title="$episode->title"
+                            :number="$episode->number"
+                            :duration="$episode->formatted_duration"
                         />
                     </li>
                 @endforeach
