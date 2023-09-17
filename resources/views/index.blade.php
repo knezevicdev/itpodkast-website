@@ -177,4 +177,5 @@
             </div>
         </div>
     </section>
+    @vite(['resources/js/home.js'])
 </x-layout>
