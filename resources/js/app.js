@@ -1,5 +1,3 @@
-import './bootstrap';
-
 function setupBurgerMenu () {
     const burgerMenu = document.querySelector('#burger-menu');
     const menu  = document.querySelector('#menu');
