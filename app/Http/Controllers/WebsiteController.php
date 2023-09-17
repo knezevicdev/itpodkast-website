@@ -91,7 +91,8 @@ class WebsiteController extends Controller
 
     public function epizode(Request $request): View
     {
-        $page = $request->query('page', 1);
+        $page = intval($request->query('page', 1));
+        if ($page < 1) $page = 1;
         $offset = ($page - 1) * 6;
 
         return view('epizode', [

@@ -11,7 +11,7 @@
                         <br/>
                         a niste smeli da pitate!
                     </p>
-                    <a href="/epizode"
+                    <a href="{{ route('epizode') }}"
                        class="mt-8 mb-10 font-azeret-mono text-lg font-semibold border-2 border-black px-8 py-2.5 inline-flex bg-bg relative transition-shadow hover:shadow-effect">Najnovije
                         epizode</a>
                     <div class="flex items-start lg:items-center flex-col lg:flex-row">
@@ -103,7 +103,7 @@
                     @foreach($episodes as $episode)
                         <li class="p-6 border-2 border-black mb-8">
                             <div class="grid grid-cols-1 lg:grid-cols-episode gap-3 lg:gap-8">
-                                <a href="/epizode/{{ $episode['slug'] }}" class="inline-block">
+                                <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}" class="inline-block">
                                     <img class="border-2 border-black" src="/images/epizoda-thumb.jpeg" alt="episode">
                                 </a>
                                 <div class="flex flex-col">
@@ -114,14 +114,14 @@
                                             <span class="text-gray text-lg font-azeret-mono">{{ $episode['duration'] }}</span>
                                         </div>
                                     </div>
-                                    <a href="/epizode/{{ $episode['slug'] }}">
+                                    <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}">
                                         <h6 class="text-xl lg:text-3xl mt-2.5 hover:text-orange transition-all ease-in-out">
                                             {{ $episode['title'] }}
                                         </h6>
                                     </a>
                                     <div class="mt-auto flex justify-between flex-col xl:flex-row">
                                         <div class="mt-4 xl:mt-0">
-                                            <a href="/epizode/{{ $episode['slug'] }}"
+                                            <a href="{{ route('epizoda', ['slug' => $episode['slug']]) }}"
                                                class="px-6 lg:px-8 py-2 lg:py-4 bg-black text-white font-azeret-mono font-semibold text-md lg:text-xs inline-block transition-shadow hover:shadow-effect-orange">Pusti
                                                 epizodu</a>
                                         </div>
@@ -161,7 +161,7 @@
                     @endforeach
                 </ul>
                 <div class="flex justify-center gap-8 relative">
-                    <a href="/epizode" class="rounded-full inline-flex w-[220px] h-[220px] sticky top-8">
+                    <a href="{{ route('epizode') }}" class="rounded-full inline-flex w-[220px] h-[220px] sticky top-8">
                         <span
                             class="rounded-full w-[103%] h-[102%] absolute top-0 left-0 -z-10 bg-black button-mouse-move-bg will-change-transform"></span>
                         <span

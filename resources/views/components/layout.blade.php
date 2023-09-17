@@ -15,12 +15,12 @@
             <nav role="navigation"
                  class="font-azeret-mono flex lg:relative absolute overflow-hidden bg-bg flex-col lg:flex-row w-full lg:w-auto top-full lg:top-0 border-y-2 lg:border-y-0 border-black transition-transform -translate-y-full lg:translate-y-0 z-0 lg:z-10"
                  id="menu">
-                <a href="/" aria-current="page"
-                   class="pl-4 lg:pl-0 py-3 lg:py-7 pr-8 flex items-center text-lg leading-none text-orange">Početna</a>
-                <a href="/epizode"
-                   class="pl-4 py-3 lg:pl-0 lg:py-7 pr-8 flex items-center text-lg leading-none">Epizode</a>
-                <a href="/kontakt"
-                   class="pl-4 py-3 lg:pl-0 lg:py-7 pr-8 flex items-center text-lg leading-none">Kontakt</a>
+                <a href="{{ route('home') }}" aria-current="page"
+                   class="pl-4 lg:pl-0 py-3 lg:py-7 pr-8 flex items-center text-lg leading-none {{ Route::is('home') ? 'text-orange' : '' }}">Početna</a>
+                <a href="{{ route('epizode') }}"
+                   class="pl-4 py-3 lg:pl-0 lg:py-7 pr-8 flex items-center text-lg leading-none {{ Route::is('epizode') || Route::is('epizoda') ? 'text-orange' : '' }}">Epizode</a>
+                <a href="{{ route('kontakt') }}"
+                   class="pl-4 py-3 lg:pl-0 lg:py-7 pr-8 flex items-center text-lg leading-none {{ Route::is('kontakt') ? 'text-orange' : '' }}">Kontakt</a>
             </nav>
             <button class="lg:hidden flex justify-center items-center bg-bg z-10 fill-black" id="burger-menu">
                 <svg viewBox="0 0 100 80" width="25" height="25" class="fill-inherit">
@@ -30,12 +30,12 @@
                 </svg>
             </button>
             <div class="border-x-2 border-x-black px-4 py-3 bg-bg z-10">
-                <a href="/">
+                <a href="{{ route('home') }}">
                     <img src="/images/logo.png" alt="Logo">
                 </a>
             </div>
             <div class="flex justify-center lg:justify-end items-center bg-bg z-10">
-                <x-orange-button href="/epizode">
+                <x-orange-button href="{{ route('epizode') }}">
                     Sve epizode
                 </x-orange-button>
             </div>

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WebsiteController::class, 'index']);
-Route::get('/epizode', [WebsiteController::class, 'epizode']);
-Route::get('/epizode/{slug}', [WebsiteController::class, 'epizoda']);
-Route::get('/kontakt', [WebsiteController::class, 'kontakt']);
+Route::get('/', [WebsiteController::class, 'index'])->name('home');
+Route::get('/epizode', [WebsiteController::class, 'epizode'])->name('epizode');
+Route::get('/epizode/{slug}', [WebsiteController::class, 'epizoda'])->name('epizoda');
+Route::get('/kontakt', [WebsiteController::class, 'kontakt'])->name('kontakt');
