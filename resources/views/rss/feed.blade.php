@@ -25,6 +25,12 @@
         </itunes:owner>
         <podcast:locked owner="knezevicdev@gmail.com">yes</podcast:locked>
         <podcast:guid>6a88773a-4d43-5084-abdb-a7e288acfb14</podcast:guid>
+        <itunes:image href="{{ asset('/images/cover.jpeg') }}"></itunes:image>
+        <image>
+            <url>{{ asset('/images/cover.jpeg') }}</url>
+            <title>Podkast IT Tipa</title>
+            <link>{{ route('home') }}</link>
+        </image>
 
         @foreach($episodes as $episode)
             <item>
