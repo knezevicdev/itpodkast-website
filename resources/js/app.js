@@ -3,6 +3,7 @@ import './bootstrap';
 function animateButtonHover () {
     const container = document.querySelector('.button-mouse-move');
     const bg = document.querySelector('.button-mouse-move-bg');
+    if (!container || !bg) return;
 
     container.addEventListener('mousemove', (e) => {
         const { clientX, clientY } = e;
@@ -24,6 +25,7 @@ function animateButtonHover () {
 
 function animateHeroImages () {
     const heroImagesShadows = document.querySelectorAll('.hero-image-shadow');
+    if(heroImagesShadows.length === 0) return;
 
     window.addEventListener('mousemove', (e) => {
         const x = e.clientX / window.innerWidth;
@@ -48,6 +50,7 @@ function animateHeroImages () {
 function setupBurgerMenu () {
     const burgerMenu = document.querySelector('#burger-menu');
     const menu  = document.querySelector('#menu');
+    if (!burgerMenu || !menu) return;
 
     burgerMenu.addEventListener('click', () => {
         menu.classList.toggle('-translate-y-full');
@@ -61,6 +64,8 @@ function setupBurgerMenu () {
 
 function setupScroller () {
     const scroller = document.querySelector('#scroller');
+    if (!scroller) return;
+
     const scrollerElement = scroller.firstElementChild;
     const scrollerElements = [scrollerElement.cloneNode(true), scrollerElement.cloneNode(true), scrollerElement.cloneNode(true)];
 
