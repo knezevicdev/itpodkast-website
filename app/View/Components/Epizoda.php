@@ -13,7 +13,8 @@ class Epizoda extends Component
         public string $slug,
         public string $title,
         public string $number,
-        public string $duration
+        public string $duration,
+        public string $src,
     )
     { }
 

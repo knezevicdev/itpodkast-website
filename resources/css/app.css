@@ -1,3 +1,5 @@
+@import "../../node_modules/plyr/dist/plyr.css";
+
 @font-face {
     font-family: 'Azeret Mono';
     font-style: normal;
@@ -45,4 +47,9 @@
     .hero-image-right {
         grid-area: 1 / 10 / 2 / 12;
     }
+}
+
+* {
+    --plyr-audio-controls-background: #fcf5ee;
+    --plyr-color-main: #fd8910;
 }

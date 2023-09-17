@@ -4,10 +4,10 @@
         <h1 class="text-7xl leading-tight">{{ $episode->title }}</h1>
         <div class="p-6 border-2 border-black mb-8 mt-2">
             <div class="grid grid-cols-1 lg:grid-cols-episode gap-3 lg:gap-8">
-                <a
+                <span
                     class="inline-block">
                     <img class="border-2 border-black" src="{{ $episode->cover_image_url }}" alt="episode">
-                </a>
+                </span>
                 <div class="flex flex-col">
                     <div class="flex flex-col lg:flex-row justify-between pt-2.5">
                         <div class="flex items-center mt-2 lg:mt-0">
@@ -17,9 +17,9 @@
                     </div>
                     <div class="mt-auto flex justify-between flex-col xl:flex-row">
                         <div class="mt-4 xl:mt-0">
-                            <a href="#"
+                            <button onclick="playEpisode('{{ $episode->slug }}', '{{ asset($episode->audio_url) }}')"
                                class="border-2 border-black px-6 lg:px-8 py-2 lg:py-4 bg-orange text-black font-azeret-mono font-semibold text-md lg:text-xl inline-block transition-shadow hover:shadow-effect">Pusti
-                                epizodu</a>
+                                epizodu</button>
                         </div>
                         <div class="flex flex-col lg:flex-row items-start lg:items-center mt-3 xl:mt-0">
                             <span class="text-gray pr-2.5">Poslušajte na:</span>
@@ -62,6 +62,7 @@
                         :title="$episode->title"
                         :number="$episode->number"
                         :duration="$episode->formatted_duration"
+                        :src="asset($episode->audio_url)"
                     />
                 </li>
             @endforeach

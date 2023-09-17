@@ -13,6 +13,7 @@
                             :title="$episode->title"
                             :number="$episode->number"
                             :duration="$episode->formatted_duration"
+                            :src="asset($episode->audio_url)"
                         />
                     </li>
                 @endforeach
