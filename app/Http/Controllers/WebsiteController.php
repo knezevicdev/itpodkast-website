@@ -110,4 +110,9 @@ class WebsiteController extends Controller
             'episodes' => array_slice($this->episodes, 0, 3)
         ]);
     }
+
+    public function kontakt(): View
+    {
+        return view('kontakt');
+    }
 }

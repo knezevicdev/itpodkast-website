@@ -96,20 +96,12 @@
             <img src="/images/logo.png" alt="Logo" class="max-h-24">
             <div>
                 <div class="flex gap-2 justify-center lg:justify-end mb-2 mt-2 lg:mt-0">
-                    <div class="group relative">
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-black group-hover:translate-x-1 group-hover:translate-y-1 transition-transform ease-in-out -z-10"></div>
-                        <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg">
-                            <img src="/images/icons/instagram-dark.svg" alt="instagram" class="w-4">
-                        </a>
-                    </div>
-                    <div class="group relative">
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-black group-hover:translate-x-1 group-hover:translate-y-1 transition-transform ease-in-out -z-10"></div>
-                        <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg">
-                            <img src="/images/icons/twitter-dark.svg" alt="twitter" class="w-4">
-                        </a>
-                    </div>
+                    <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
+                        <img src="/images/icons/instagram-dark.svg" alt="instagram" class="w-4">
+                    </a>
+                    <a href="" class="inline-flex  border-2 border-black w-8 h-8 items-center justify-center bg-bg transition-shadow hover:shadow-effect-sm">
+                        <img src="/images/icons/twitter-dark.svg" alt="twitter" class="w-4">
+                    </a>
                 </div>
                 <p class="text-gray text-lg font-azeret-mono">Copyright © Podkast IT Tipa</p>
             </div>

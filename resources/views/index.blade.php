@@ -11,13 +11,9 @@
                         <br/>
                         a niste smeli da pitate!
                     </p>
-                    <div class="group relative mt-8 mb-10 inline-flex">
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-black group-hover:translate-x-1.5 group-hover:translate-y-1.5 transition-transform ease-in-out"></div>
-                        <a href="/epizode"
-                           class="font-azeret-mono text-lg font-semibold border-2 border-black px-8 py-2.5 inline-flex bg-bg relative">Najnovije
-                            epizode</a>
-                    </div>
+                    <a href="/epizode"
+                       class="mt-8 mb-10 font-azeret-mono text-lg font-semibold border-2 border-black px-8 py-2.5 inline-flex bg-bg relative transition-shadow hover:shadow-effect">Najnovije
+                        epizode</a>
                     <div class="flex items-start lg:items-center flex-col lg:flex-row">
                         <span class="text-xl lg:pr-5 pb-2 lg:pb-0">Slušajte nas na:</span>
                         <ul class="flex gap-2 lg:gap-8">
@@ -107,7 +103,7 @@
                     @foreach($episodes as $episode)
                         <li class="p-6 border-2 border-black mb-8">
                             <div class="grid grid-cols-1 lg:grid-cols-episode gap-3 lg:gap-8">
-                                <a href="#" class="inline-block">
+                                <a href="/epizode/{{ $episode['slug'] }}" class="inline-block">
                                     <img class="border-2 border-black" src="/images/epizoda-thumb.jpeg" alt="episode">
                                 </a>
                                 <div class="flex flex-col">
@@ -118,20 +114,16 @@
                                             <span class="text-gray text-lg font-azeret-mono">{{ $episode['duration'] }}</span>
                                         </div>
                                     </div>
-                                    <a href="#">
+                                    <a href="/epizode/{{ $episode['slug'] }}">
                                         <h6 class="text-xl lg:text-3xl mt-2.5 hover:text-orange transition-all ease-in-out">
                                             {{ $episode['title'] }}
                                         </h6>
                                     </a>
                                     <div class="mt-auto flex justify-between flex-col xl:flex-row">
                                         <div class="mt-4 xl:mt-0">
-                                            <div class="inline-block relative group">
-                                                <div
-                                                    class="absolute top-0 left-0 w-full h-full bg-orange group-hover:translate-x-1.5 group-hover:translate-y-1.5 transition-transform ease-in-out -z-10"></div>
-                                                <a href="#"
-                                                   class="px-6 lg:px-8 py-2 lg:py-4 bg-black text-white font-azeret-mono font-semibold text-md lg:text-xs inline-block">Pusti
-                                                    epizodu</a>
-                                            </div>
+                                            <a href="/epizode/{{ $episode['slug'] }}"
+                                               class="px-6 lg:px-8 py-2 lg:py-4 bg-black text-white font-azeret-mono font-semibold text-md lg:text-xs inline-block transition-shadow hover:shadow-effect-orange">Pusti
+                                                epizodu</a>
                                         </div>
                                         <div class="flex flex-col lg:flex-row items-start lg:items-center mt-3 xl:mt-0">
                                             <span class="text-gray pr-2.5">Poslušajte na:</span>

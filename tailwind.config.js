@@ -22,6 +22,11 @@ module.exports = {
                 'anonymous-pro': ['"Anonymous Pro"', 'monospace'],
                 'azeret-mono': ['"Azeret Mono"', 'monospace'],
             },
+            boxShadow: {
+                'effect-sm': '3px 2.5px #0e0c09',
+                'effect': '6px 5px #0e0c09',
+                'effect-orange': '6px 5px #fd8910',
+            }
         },
     },
     variants: {

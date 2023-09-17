@@ -21,7 +21,7 @@
                          transform="translate(0, 1)">
                         <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
                     </svg>
-                    Prošlo
+                    Prethodno
                 </x-orange-button>
             @endif
             @if($totalPages > $page)
