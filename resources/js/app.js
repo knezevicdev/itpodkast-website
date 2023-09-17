@@ -14,5 +14,10 @@ function setupBurgerMenu () {
 }
 
 (() => {
-    setupBurgerMenu();
+    function setup() {
+        setupBurgerMenu();
+    }
+    setup();
+
+    document.addEventListener('livewire:navigated', setup)
 })();

@@ -91,7 +91,12 @@ function setupScroller () {
 }
 
 (() => {
-    animateButtonHover();
-    animateHeroImages();
-    setupScroller();
+    function setup() {
+        animateButtonHover();
+        animateHeroImages();
+        setupScroller();
+    }
+    setup();
+
+    document.addEventListener('livewire:navigated', setup)
 })();
