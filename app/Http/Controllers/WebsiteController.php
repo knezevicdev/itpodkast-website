@@ -100,4 +100,14 @@ class WebsiteController extends Controller
             'totalPages' => ceil(count($this->episodes) / 6)
         ]);
     }
+
+    public function epizoda(string $slug): View
+    {
+        $episode = collect($this->episodes)->firstWhere('slug', $slug);
+
+        return view('epizoda', [
+            'episode' => $episode,
+            'episodes' => array_slice($this->episodes, 0, 3)
+        ]);
+    }
 }

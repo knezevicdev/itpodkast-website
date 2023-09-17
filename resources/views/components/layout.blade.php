@@ -46,7 +46,7 @@
 
     <div class="px-4 lg:px-0">
         <div class="border-x-2 lg:border-x-0 lg:border-y-2 border-black">
-            <div class="container grid grid-cols-1 lg:grid-cols-7">
+            <div class="lg:container grid grid-cols-1 lg:grid-cols-7">
                 <div
                     class="py-8 lg:px-5 border-black border-y-2 lg:border-y-0 lg:border-x-2 flex justify-center items-center font-bold text-lg">
                     Nađi nas na:

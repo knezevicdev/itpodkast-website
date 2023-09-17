@@ -1,7 +1,7 @@
 <x-layout>
     <section class="container py-16 lg:py-24 px-4 lg:px-0">
         <h1 class="text-5xl md:text-6xl xl:text-8xl mb-16 text-center">Sve epizode</h1>
-        <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach ($episodes as $episode)
                 <li>
                     <x-epizoda

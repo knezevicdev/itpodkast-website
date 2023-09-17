@@ -1,5 +1,5 @@
 <x-layout>
-    <section>
+    <section class="overflow-x-hidden">
         <div class="container grid grid-cols-2 gap-5 lg:hero pt-6 mb-16 lg:mb-24 px-4 lg:px-0">
             <div class="lg:hero-content mt-4 lg:mt-16 col-span-2">
                 <h1 class="text-5xl lg:text-8xl lg:ml-20">Podkast IT</h1>
