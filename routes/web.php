@@ -19,4 +19,4 @@ Route::get('/', [WebsiteController::class, 'index'])->name('home');
 Route::get('/epizode', [WebsiteController::class, 'epizode'])->name('epizode');
 Route::get('/epizode/{slug}', [WebsiteController::class, 'epizoda'])->name('epizoda');
 Route::get('/kontakt', [WebsiteController::class, 'kontakt'])->name('kontakt');
-Route::get('/rss-feed', [RssFeedController::class, 'generate'])->name('rss-feed');
+Route::get('/feed/podcast', [RssFeedController::class, 'generate'])->name('rss-feed');
