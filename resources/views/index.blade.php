@@ -12,6 +12,7 @@
                         a niste smeli da pitate!
                     </p>
                     <a href="{{ route('epizode') }}"
+                       wire:navigate
                        class="mt-8 mb-10 font-azeret-mono text-lg font-semibold border-2 border-black px-8 py-2.5 inline-flex bg-bg relative transition-shadow hover:shadow-effect">Najnovije
                         epizode</a>
                     <div class="flex items-start lg:items-center flex-col lg:flex-row">
